@@ -87,6 +87,15 @@ namespace APA.APA
         protected global::System.Web.UI.WebControls.Label LBLFirstName;
 
         /// <summary>
+        /// rfvFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstName;
+
+        /// <summary>
         /// TXTMI control.
         /// </summary>
         /// <remarks>
@@ -121,6 +130,15 @@ namespace APA.APA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LBLLastName;
+
+        /// <summary>
+        /// rfvLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLastName;
 
         /// <summary>
         /// TXTMailingAddress control.
@@ -231,6 +249,15 @@ namespace APA.APA
         protected global::System.Web.UI.WebControls.Label LBLDaytimePhone;
 
         /// <summary>
+        /// rfvDaytimePhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDaytimePhone;
+
+        /// <summary>
         /// TXTCellPhone control.
         /// </summary>
         /// <remarks>
@@ -265,6 +292,24 @@ namespace APA.APA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LBLEmailAddress;
+
+        /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+
+        /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
 
         /// <summary>
         /// TXTInstitution control.
@@ -429,6 +474,15 @@ namespace APA.APA
         protected global::System.Web.UI.WebControls.CheckBox Chktrue;
 
         /// <summary>
+        /// cvConfirmation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvConfirmation;
+
+        /// <summary>
         /// ChkVisa control.
         /// </summary>
         /// <remarks>
@@ -454,6 +508,15 @@ namespace APA.APA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox ChkAmericanExpress;
+
+        /// <summary>
+        /// cvPaymentMethod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvPaymentMethod;
 
         /// <summary>
         /// txtname control.
@@ -546,6 +609,24 @@ namespace APA.APA
         protected global::System.Web.UI.WebControls.Label lblcredit;
 
         /// <summary>
+        /// rfvCreditCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditCard;
+
+        /// <summary>
+        /// cvCreditCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvCreditCard;
+
+        /// <summary>
         /// txtRegistrant control.
         /// </summary>
         /// <remarks>
@@ -580,6 +661,24 @@ namespace APA.APA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblExpiration;
+
+        /// <summary>
+        /// rfvExpiration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvExpiration;
+
+        /// <summary>
+        /// revExpiration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revExpiration;
 
         /// <summary>
         /// txtCardholder control.

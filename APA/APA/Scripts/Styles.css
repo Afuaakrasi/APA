@@ -1,15 +1,5 @@
-﻿body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size:24px;
-}
-h1{
-    font-size: 36px;
-}
-hr {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
+﻿
+
 .copyright{
     font-size:15px;
     font-weight: bold;
@@ -17,62 +7,91 @@ hr {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Segoe Script': 20px;
     padding: 20px;
     background-color: #f4f4f4;
 }
 
-h3 {
-    text-align: center;
-    color: mediumvioletred;
-}
 h1 {
-    font-size: 18px; /* Set font size */
-    font-weight: bold; /* Make the text bold */
-    color: black; /* Set text color */
-    text-align: center; /* Align the text to the center */
-    text-transform: uppercase; /* Transform text to uppercase */
-    letter-spacing: 2px; /* Add letter spacing */
-    font-family: Arial, Helvetica, sans-serif /* Set font family */
+    
+    font-size: 30px; 
+    font-weight: bold; 
+    color: black; 
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-family: Arial, Helvetica, sans-serif 
 }
 
 
 h2 {
-    font-size: 25px; /* Set font size */
-    font-weight: bold; /* Make the text bold */
-    color: black; /* Set text color */
-    text-align: center; /* Align the text to the center */
-    text-transform: uppercase; /* Transform text to uppercase */
-    letter-spacing: 2px; /* Add letter spacing */
-    font-family: Arial, Helvetica, sans-serif /* Set font family */
+    font-size: 38px; 
+    font-weight: bold; 
+    color: black;
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-family: Arial, Helvetica, sans-serif 
 }
 
 h3 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
-    margin-top: 0;
     color: mediumvioletred;
     font-family: Arial, Helvetica, sans-serif
 }
 
-.corner-textbox {
-    position: fixed; /* Fixes the position relative to the viewport */
-    top: 20px; /* 20px from the top edge */
-    right: 20px; /* 20px from the right edge */
-    width: 100px; /* Width of the text box */
-    padding: 5px; /* Padding inside the text box */
-    background-color: mediumvioletred; /* mediumvioletred background */
-    font-size: 25px; /* Text size */
-    text-transform: uppercase; /* Automatically turns input text into uppercase */
+.corner-textbox
+{
+    position: absolute; 
+    top:10px;
+    right: 20px; 
+    padding-bottom:15px;
+    padding-top:15px;
+    width: 120px; 
+    height:50px;
+    bottom:6px;
+    background-color: mediumvioletred; 
+    font-size: 27px; 
+    text-transform: uppercase;
     text-align: center;
     color: white;
 }
 
 p {
-    font-size: 12px;
+    font-size: 20px;
     font-weight: bold;
-    font-style: italic;
+    
+}
+p1{
+    font-style:italic;
+    text-align:left;
+    font-size:18px;
+    font-weight:bold;
+}
+.text-border {
+    border: none;
+    border-bottom: 2px solid mediumvioletred;
+    width: 305px;
+    gap: 10px;
+    padding: 4px 0;
+    margin-bottom: 10px;
+}
+
+.label {
+    display:grid;
+    margin-bottom: 10px;
+}
+
+.requiredLabel {
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    
+}
+
+.required{
+    color:red;
 }

@@ -1,18 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/APA/APA.Site1.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="APA.APA.Registration" %>
 <asp:Content ID="MyContent" ContentPlaceHolderID="MyContentPlaceHolder" runat="server">
-   
-    <h1 align="center" >ADVANCE REGISTRATION INSTRUCTIONS</h1>
+   <h1>ADVANCE REGISTRATION INSTRUCTIONS</h1>
  <br />
-    <style>
-div {
-    font-size:17px;
-}
-    </style> 
-    
     <div class="container-fluid">
     <div class="row">
-        <div class="col-4"> <b>For immediate confirmation of your registration, complete the online convention registration form at www.apa.org/convention. You may register online begining on April 15,2016, at 10:00am. EDT through August 7,2016, the last day of the convention.
-</b>
+        <div class="col-4"> 
+            <b>For immediate confirmation of your registration, complete the online convention registration form at www.apa.org/convention. You may register online begining on April 15,2016, at 10:00am. EDT through August 7,2016, the last day of the convention.</b>
             <br />
             <br />
 
@@ -177,368 +170,290 @@ form for the registration fee. Checks must be payable in U.S. dollars
 and drawn on a U.S. bank</div>
     </div>
 </div>
-    <style>
-        /* Style for h3 */
-        h1
-        {
-            font-size: 18px; /* Set font size */
-            font-weight: bold; /* Make the text bold */
-            color: black; /* Set text color */
-            text-align: center; /* Align the text to the center */
-            text-transform: uppercase; /* Transform text to uppercase */
-            letter-spacing: 2px; /* Add letter spacing */
-            font-family: Arial, Helvetica, sans-serif /* Set font family */
-        }
-        
-        
-        h2{
-            font-size: 25px; /* Set font size */
-            font-weight: bold; /* Make the text bold */
-            color: black; /* Set text color */
-            text-align: center; /* Align the text to the center */
-            text-transform: uppercase; /* Transform text to uppercase */
-            letter-spacing: 2px; /* Add letter spacing */
-            font-family: Arial, Helvetica, sans-serif /* Set font family */
-        }
-        h3 {
-            
-            text-align: center;
-            text-transform: uppercase;
-            font-size:18px;
-            font-weight: bold;
-            margin-top:0;
-            color:mediumvioletred;
-           font-family: Arial, Helvetica, sans-serif
-        }
-        </style>
-    d 
-   <style>
-        /* Positioning the text box in the top-right corner */
-        
-        .corner-textbox
-        {
-            position:fixed;  /* Fixes the position relative to the viewport */
-            top: 20px;        /* 20px from the top edge */
-            right: 20px;      /* 20px from the right edge */
-            width: 100px;     /* Width of the text box */
-            padding: 5px;    /* Padding inside the text box */
-            background-color: mediumvioletred; /* mediumvioletred background */
-            font-size: 25px; /* Text size */
-            text-transform: uppercase; /* Automatically turns input text into uppercase */
-            text-align:center;
-            color:white;
-        }
-</style>
-    <div class="page-break"></div>
-    <div>
-    <p></p>
+    <div class="viewport">
+        <textarea class="corner-textbox"  placeholder="">REG16</textarea>
     </div>
-
+    
+<div class="page-break"></div>
+  
     <h3 align=center>2016 AMERICAN PSYCHOLOGICAL ASSOCIATION ANNUAL CONVENTION</h3>
 <h2 align="center"> ADVANCE REGISTRATION FORM</h2> 
             
     
-      <p align="left"> Lines 2,6 &7 will appear on badge.</p>
-    <style>
-        p
-        {
-            font-size: 12px;
-            font-weight:bold;
-            font-style: italic;
-        }
-        .text-border{
-            border:none;
-            border-bottom: 2px solid mediumvioletred;
-            width: 200px;
-           
-            
-            gap:10px;
-            background: transparent;
-            padding: 4px 0;
-            margin-bottom:15px;
-        }
-        .label{
-            display:block;
-            margin-bottom:15px;
-
-            margin-top: 5px;
-        }
-        </style>
+<p1> Lines 2,6 &7 will appear on badge.</p1>
     <br />
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-8" style="border:2px solid red;">
-                <div class="validation-summary">
-                <asp:ValidationSummary 
-                    ID="ValidationSummary1"
-                    runat="server"
-                    ValidationGroup="FormValidation"
-                    HeaderText="Please correct the following errors:"
-                    ForeColor="Red"
-                    ShowSummary="true"
-                    ShowMessageBox="false" />
-            </div>
-    <table>
-                    <tr>
-                        <td>
-                            <span>1</span>
-                            <asp:TextBox ID="TXTAPAMemberNumber" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLAPAMemberNumber" runat="server" CssClass="label" Text="APA Member Number(8 digits)"></asp:Label>
-                            <asp:RequiredFieldValidator ID="RFV" runat="server" ControltoValidate="TXTAPAMemberNumber" InitialValue="none" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="REV" runat="server"  ControlToValidate="TXTAPAMemberNumber" ValidationExpression="^\d{8}$" ErrorMessage="Please enter full APA Member Number" ForeColor="Red"></asp:RegularExpressionValidator>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>2</span>
-                            <asp:DropDownList ID="DRPPrefix" runat="server">
-                            <asp:ListItem Text="Please select one" Value="" Selected="True"></asp:ListItem>
-                            <asp:ListItem Text="Dr" Value="Dr."></asp:ListItem>
-                            <asp:ListItem Text="Mr" Value="Mr."></asp:ListItem>
-                            <asp:ListItem Text="Mrs" Value="Mrs."></asp:ListItem>
-                            </asp:DropDownList>
-                             </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>3</span>
-                            <asp:TextBox ID="TXTFirstName" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLFirstName" runat="server" CssClass="label" Text="First Name(15 spaces)"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TXTMI" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLMI" runat="server" CssClass="label" Text="MI"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TXTLastName" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLLastName" runat="server" CssClass="label" Text="Last Name(20 spaces)"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>4</span>
-                            <asp:TextBox ID="TXTMailingAddress" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLMailingAddress" runat="server" CssClass="label" Text="Mailing Address(32 spaces)"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>5</span>
-                            <asp:TextBox ID="TXTCity" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLCity" runat="server" CssClass="label" Text="City(25 spaces)"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TXTStateProvince" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLStateProvince" runat="server" CssClass="label" Text="State/Province"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TXTZipPostalCode" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLZipPostalCode" runat="server" CssClass="label" Text="Zip/Postal Code"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TXTCountry" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLCountry" runat="server" CssClass="label" Text="Country(If not U.S)"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>6</span>
-                            <asp:TextBox ID="TXTDaytimePhone" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLDaytimePhone" runat="server" CssClass="label" Text="Daytime Phone"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TXTCellPhone" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLCellPhone" runat="server" CssClass="label" Text="CellPhone"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TXTEmailAddress" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLEmailAddress" runat="server" CssClass="label" Text="EmailAddress"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>7</span>
-                            <asp:TextBox ID="TXTInstitution" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLInstitution" runat="server" CssClass="label" Text="Institution(do not exceed 40 spaces"></asp:Label>
+ <br />
+
+   <div class="container-fluid">
+    <div class="row">
+        <div class="col-8" >
+            <div class="validation-summary">
+            <asp:ValidationSummary 
+                ID="ValidationSummary1"
+                runat="server"
+                ValidationGroup="FormValidation"
+                HeaderText="Please correct the following errors:"
+                ForeColor="Red"
+                ShowSummary="true"
+                ShowMessageBox="false" />
+        </div>
+<table>
+                <tr>
+                    <td>
+                        <span><b>1.</b><asp:TextBox ID="TXTAPAMemberNumber" runat="server" CssClass="text-border"></asp:TextBox>
+                        </span>
+                        <asp:Label ID="LBLAPAMemberNumber" runat="server" CssClass="label" Text="APA Member Number(8 digits)"> </asp:Label>
+                        <asp:RequiredFieldValidator ID="RFV" runat="server" ControltoValidate="TXTAPAMemberNumber" InitialValue="" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="FormValidation"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="REV" runat="server" ControlToValidate="TXTAPAMemberNumber" ValidationExpression="^\d{8}$" ErrorMessage="Please enter full APA Member Number" ForeColor="Red" ValidationGroup="FormValidation"></asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span><b>2.</b></span>
+                        <asp:DropDownList ID="DRPPrefix" style="margin-bottom:15px;" runat="server">
+                        <asp:ListItem Text="Please select one" Value="" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="Dr" Value="Dr."></asp:ListItem>
+                        <asp:ListItem Text="Mr" Value="Mr."></asp:ListItem>
+                        <asp:ListItem Text="Mrs" Value="Mrs."></asp:ListItem>
+                        </asp:DropDownList>
                          </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>8</span>
-                            <asp:TextBox ID="TXTCityIfDifferent" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLCityIfDifferent" runat="server" CssClass="label" Text="City(if different from line 3)(25 spaces)"></asp:Label>
-                            </td>
-                        <td>
-                        
-                             <asp:TextBox ID="TXTStateProvince1" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLStateProvince1" runat="server" CssClass="label" Text="State/Province"></asp:Label>
-                           </td>
-                          <td>
-                            <asp:TextBox ID="TXTCountry1" runat="server" CssClass="text-border"></asp:TextBox>
-                             <asp:Label ID="LBLCountry1" runat="server" CssClass="label" Text="Country(If not U.S)"></asp:Label>
-                           </td>
-
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>9</span>
-                            <asp:TextBox ID="TXTInstitutionalCode" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="LBLInstitutionalCode" runat="server" CssClass="label" Text="Institutional Code(see instructions)"></asp:Label>
-                        </td>
-
-                        <td>
-                            <label>
-                            <span style="margin-left:15px">10</span>
-                                <span style="margin-left:15px">First APA Convention</span>
-                                <span style="margin-left:15px">Yes</span>
-                                <asp:RadioButton ID="OptYes" runat="server" />
-                                </label>
-                            <label>
-                                <span style="margin-left:15px">No</span>
-                                <asp:RadioButton ID="OptNo" runat="server" />
-                            </label>
-                        </td>
-                        <td>
-                            <label>
-                                <span style="margin-right:15px">11.Programs Only Mailed Upon Request </span>
-    
-                                <asp:CheckBox ID="ChkRequest" runat="server" />
-                                <span style="margin-left:15px"> Request one here</span>
-    
-                                </label>
-                        </td>
-                        </tr>
-
-                           <tr>
-                            <td>
-                                <span>12</span>
-                                <asp:TextBox ID="TXTPersonWithDisability" runat="server" CssClass="text-border"></asp:TextBox>
-                                <asp:Label ID="LBLPersonWithDisability" runat="server" CssClass="label" Text="Person With Disability (leave blank if not diabled)"></asp:Label>
-                            </td>
-
-                            <td>
-                                <label>
-                                    <span style="margin-left:15px">13</span>
-                                    <span style="margin-left:15px">Early Career Psychologist</span>
-                                    <span style="margin-left:15px">Yes</span>
-                                    <asp:CheckBox ID="ChkYes" runat="server" />
-                                    </label>
-                                <label>
-                                    <span style="margin-left:15px">No</span>
-                                    <asp:CheckBox ID="ChkNo" runat="server" />
-                                </label>
-                            </td>
-                            </tr>
-                    <tr>
-                        <td>
-                            <label>
-                                <span>14</span>
-                                
-                                <asp:CheckBox ID="Chktrue" runat="server" />
-                                <span style="margin-left:15px">I confirm that all information provided is correct</span>
-                                
-                                </label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-4" style="border:2px solid red">
-                <table>
-                    <tr>
-                        <td>
-                        <span style="font-weight:bold"; text-align:"center"> Credit Card Payment Authorization</span>
-                        <p><span>I authorize the American Psychological Association to charge my (check one)</span></p>
-
-                        </td>
-                       
-                         
-                    </tr>
-                    <tr>
-                        <td>
-                             <label>
-                       
-                         <asp:CheckBox ID="ChkVisa" runat="server" />
-                            <span style="margin-right:15px">MasterCard </span>
-                         <asp:CheckBox ID="ChkMasterCard" runat="server" />
-                           <span style="margin-right:15px">VISA </span>
-                         
-                         <asp:CheckBox ID="ChkAmericanExpress" runat="server" />
-                         <span style="margin-right:15px">American Express</span>
-     
-                         </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>2016 convention fee to my credit card as indicated below:</p>
-                        </td>
-                    </tr>
-                   <br />
-                    <tr>
-                        <td>
-                          
-                            <asp:TextBox ID="txtname" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="lblname" runat="server" CssClass="label" Text="Name as it appears on credit card"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                           
-                            <asp:TextBox ID="txtfee" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="lblfee" runat="server" CssClass="label" Text="Fee to be charged: $(convention registration)"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                           
-                            <asp:TextBox ID="txtaddress" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="lbladdress" runat="server" CssClass="label" Text="Address of cardholder"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
+                </tr>
+                <tr>
                     <td>
-                        
-                        <asp:TextBox ID="txtDaytime" runat="server" CssClass="text-border"></asp:TextBox>
-                        <asp:Label ID="lblDaytime" runat="server" CssClass="label" Text="Daytime Phone Number"></asp:Label>
+                        <span><b>3.</b></span>
+                        <asp:TextBox ID="TXTFirstName" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLFirstName" runat="server" CssClass="label" Text="First Name(15 spaces)"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" ControlToValidate="TXTFirstName" ErrorMessage="First Name is required" ValidationGroup="FormValidation" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TXTMI" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLMI" runat="server" CssClass="label" Text="MI"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TXTLastName" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLLastName" runat="server" CssClass="label" Text="Last Name(20 spaces)"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvLastName" runat="server" ControlToValidate="TXTLastName" ErrorMessage="Last Name is required" ValidationGroup="FormValidation" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
-                    <tr>
+                <tr>
                     <td>
-                       
-                        <asp:TextBox ID="txtCredit" runat="server" CssClass="text-border"></asp:TextBox>
-                        <asp:Label ID="lblcredit" runat="server" CssClass="label" Text="Credit Card Number"></asp:Label>
+                        <span><b>4.</b></span>
+                        <asp:TextBox ID="TXTMailingAddress" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLMailingAddress" runat="server" CssClass="label" Text="Mailing Address(32 spaces)"></asp:Label>
                     </td>
                 </tr>
-                    <tr>
+                <tr>
                     <td>
-                        
-                        <asp:TextBox ID="txtRegistrant" runat="server" CssClass="text-border"></asp:TextBox>
-                        <asp:Label ID="lblRegistrant" runat="server" CssClass="label" Text="Name of Registrant(if different from carrdholder"></asp:Label>
+                        <span><b>5.</b></span>
+                        <asp:TextBox ID="TXTCity" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLCity" runat="server" CssClass="label" Text="City(25 spaces)"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TXTStateProvince" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLStateProvince" runat="server" CssClass="label" Text="State/Province"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TXTZipPostalCode" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLZipPostalCode" runat="server" CssClass="label" Text="Zip/Postal Code"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TXTCountry" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLCountry" runat="server" CssClass="label" Text="Country(If not U.S)"></asp:Label>
                     </td>
                 </tr>
-                    <tr>
-                        <td>
+                <tr>
+                    <td>
+                        <span><b>6.</b></span>
+                        <asp:TextBox ID="TXTDaytimePhone" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLDaytimePhone" runat="server" CssClass="label" Text="Daytime Phone"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvDaytimePhone" runat="server" ControlToValidate="TXTDaytimePhone" ErrorMessage="Daytime Phone is required" ValidationGroup="FormValidation" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TXTCellPhone" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLCellPhone" runat="server" CssClass="label" Text="CellPhone"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TXTEmailAddress" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLEmailAddress" runat="server" CssClass="label" Text="EmailAddress"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="TXTEmailAddress" ErrorMessage="Email Address is required" ValidationGroup="FormValidation" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="TXTEmailAddress" ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" ErrorMessage="Please enter a valid email address" ValidationGroup="FormValidation" ForeColor="Red"></asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span><b>7.</b></span>
+                        <asp:TextBox ID="TXTInstitution" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLInstitution" runat="server" CssClass="label" Text="Institution(do not exceed 40 spaces"></asp:Label>
+                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span><b>8.</b></span>
+                        <asp:TextBox ID="TXTCityIfDifferent" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLCityIfDifferent" runat="server" CssClass="label" Text="City(if different from line 3)(25 spaces)"></asp:Label>
+                        </td>
+                    <td>
+                         <asp:TextBox ID="TXTStateProvince1" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLStateProvince1" runat="server" CssClass="label" Text="State/Province"></asp:Label>
+                       </td>
+                      <td>
+                        <asp:TextBox ID="TXTCountry1" runat="server" CssClass="text-border"></asp:TextBox>
+                         <asp:Label ID="LBLCountry1" runat="server" CssClass="label" Text="Country(If not U.S)"></asp:Label>
+                       </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span><b>9.</b></span>
+                        <asp:TextBox ID="TXTInstitutionalCode" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLInstitutionalCode" runat="server" CssClass="label" Text="Institutional Code(see instructions)"></asp:Label>
+                    </td>
+                    <td>
+                        <label>
+                        <span style="margin-left:15px"><b>10.</b></span>
+                            <span style="margin-left:15px">First APA Convention <style="margin-left:15px"></style>Yes</span>
                             
-                            <asp:TextBox ID="txtExpiration" runat="server" CssClass="text-border"></asp:TextBox>
-                            <asp:Label ID="lblExpiration" runat="server" CssClass="label" Text="Expiration Date"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
+                            <asp:RadioButton ID="OptYes" runat="server" GroupName="FirstConvention" />
+                            </label>
+                        <label>
+                            <span style="margin-left:15px">No</span>
+                            <asp:RadioButton ID="OptNo" runat="server" GroupName="FirstConvention" />
+                        </label>
+                    </td>
                     <td>
-                        
-                        <asp:TextBox ID="txtCardholder" runat="server" CssClass="text-border"></asp:TextBox>
-                        <asp:Label ID="lblCardholder" runat="server" CssClass="label" Text="Cardholder Signature"></asp:Label>
+                        <label>
+                            <span style="margin-right:15px"><b>11.</b>Programs Only Mailed Upon Request </span>
+                            <asp:CheckBox ID="ChkRequest" runat="server" />
+                            <span style="margin-left:15px"> Request one here</span>
+                        </label>
                     </td>
                 </tr>
-                </table>
-                <asp:Button ID="btnSubmit" runat="server" Text="SUBMIT" ValidationGroup="FormValidation" onclick="btnSubmit_Click"/>
-                
-            </div>
+                <tr>
+                    <td>
+                        <span><b>12.</b></span>
+                        <asp:TextBox ID="TXTPersonWithDisability" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="LBLPersonWithDisability" runat="server" CssClass="label" Text="Person With Disability (leave blank if not diabled)"></asp:Label>
+                    </td>
+                    <td>
+                        <label>
+                            <span style="margin-left:15px"><b>13.</b></span>
+                            <span style="margin-left:15px">Early Career Psychologist</span>
+                            <span style="margin-left:15px">Yes<asp:CheckBox ID="ChkYes" runat="server" /></span>
+                            <span style="margin-left:15px">No<asp:CheckBox ID="ChkNo" runat="server" /></span>
+                            
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <span><b>14.</b></span>
+                            <asp:CheckBox ID="Chktrue" runat="server" />
+                            <span style="margin-left:15px">I confirm that all information provided is correct</span>
+                        </label>
+                        <asp:CustomValidator ID="cvConfirmation" runat="server" 
+                            ErrorMessage="You must confirm that all information provided is correct"
+                            ValidationGroup="FormValidation" 
+                            OnServerValidate="cvConfirmation_ServerValidate"
+                            ForeColor="Red"></asp:CustomValidator>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <br />
+
+        <div class="col-4" style="border:4px solid mediumvioletred">
+            <table>
+                <tr>
+                    <td>
+                    <span style="font-weight:bold"; text-align:"center"> Credit Card Payment Authorization</span>
+                    <p><span>I authorize the American Psychological Association to charge my (check one):</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <label>
+                     <asp:CheckBox ID="ChkVisa" runat="server" />
+                        <span style="margin-right:15px">VISA </span>
+                     <asp:CheckBox ID="ChkMasterCard" runat="server" />
+                       <span style="margin-right:15px">MasterCard </span>
+                     <asp:CheckBox ID="ChkAmericanExpress" runat="server" />
+                     <span style="margin-right:15px">American Express</span>
+                     </label>
+                     <asp:CustomValidator ID="cvPaymentMethod" runat="server" 
+                        ErrorMessage="At least one payment method must be selected"
+                        ValidationGroup="FormValidation" 
+                        OnServerValidate="cvPaymentMethod_ServerValidate"
+                        ForeColor="Red"></asp:CustomValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>2016 convention fee to my credit card as indicated below:</p>
+                    </td>
+                </tr>
+                <br />
+                <tr>
+                    <td>
+                        <asp:TextBox ID="txtname" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="lblname" runat="server" CssClass="label" Text="Name as it appears on credit card"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="txtfee" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="lblfee" runat="server" CssClass="label" Text="Fee to be charged: $(convention registration)"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="txtaddress" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="lbladdress" runat="server" CssClass="label" Text="Address of cardholder"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                    <asp:TextBox ID="txtDaytime" runat="server" CssClass="text-border"></asp:TextBox>
+                    <asp:Label ID="lblDaytime" runat="server" CssClass="label" Text="Daytime Phone Number"></asp:Label>
+                </td>
+            </tr>
+                <tr>
+                <td>
+                    <asp:TextBox ID="txtCredit" runat="server" CssClass="text-border"></asp:TextBox>
+                    <asp:Label ID="lblcredit" runat="server" CssClass="label" Text="Credit Card Number"></asp:Label>
+                    <asp:RequiredFieldValidator ID="rfvCreditCard" runat="server" ControlToValidate="txtCredit" ErrorMessage="Credit Card Number is required" ValidationGroup="FormValidation" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="cvCreditCard" runat="server" 
+                        ErrorMessage="Please enter a valid credit card number"
+                        ValidationGroup="FormValidation" 
+                        OnServerValidate="cvCreditCard_ServerValidate"
+                        ForeColor="Red"></asp:CustomValidator>
+                </td>
+            </tr>
+                <tr>
+                <td>
+                    <asp:TextBox ID="txtRegistrant" runat="server" CssClass="text-border"></asp:TextBox>
+                    <asp:Label ID="lblRegistrant" runat="server" CssClass="label" Text="Name of Registrant(if different from cardholder)"></asp:Label>
+                </td>
+            </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="txtExpiration" runat="server" CssClass="text-border"></asp:TextBox>
+                        <asp:Label ID="lblExpiration" runat="server" CssClass="label" Text="Expiration Date"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvExpiration" runat="server" ControlToValidate="txtExpiration" ErrorMessage="Expiration Date is required" ValidationGroup="FormValidation" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revExpiration" runat="server" ControlToValidate="txtExpiration" ValidationExpression="^\d{2}/\d{2}$" ErrorMessage="Please enter a valid expiration date (MM/YY format)" ValidationGroup="FormValidation" ForeColor="Red"></asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                    <asp:TextBox ID="txtCardholder" runat="server" CssClass="text-border"></asp:TextBox>
+                    <asp:Label ID="lblCardholder" runat="server" CssClass="label" Text="Cardholder Signature"></asp:Label>
+                </td>
+            </tr>
+            </table>
+            <asp:Button ID="btnSubmit" runat="server" Text="SUBMIT" ValidationGroup="FormValidation" OnClick="btnSubmit_Click"/>
         </div>
     </div>
+</div>
 
-  
-   
-    
-    </asp:Content>
+</asp:Content>
